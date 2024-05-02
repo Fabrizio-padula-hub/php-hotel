@@ -37,9 +37,7 @@
             'vote' => 2,
             'distance_to_center' => 50
         ],
-
     ];
-
 ?>
 
 <!DOCTYPE html>
@@ -50,6 +48,39 @@
     <title>HOTEL</title>
 </head>
 <body>
+
+    <label>HOTEL</label>
+
+    <table>
+        <?php foreach($hotels as $hotelCatalogue) {?>
+            <tr>
+                <th>
+                    Nome: 
+                    <?php echo $hotelCatalogue['name'] ?>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Descrizione: 
+                    <?php echo $hotelCatalogue['description'] ?>
+                </td>
+                <td>
+                    <?php echo $hotelCatalogue['vote'] ?>
+                </td>
+                <td>
+                    <?php echo $hotelCatalogue['distance_to_center'] ?>
+                </td>
+            </tr>
+        <?php } ?>
+        
+        
+        
+    </table>
+
+    
+
+
+     
     
 </body>
 </html>
